@@ -9,11 +9,25 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+@IBOutlet weak var usernameTextField: UITextField!
+@IBOutlet weak var passwordTextField: UITextField!
+@IBOutlet weak var loginButton: UIButton!
+    
+  
+    
+@IBAction func didTapLoginButton(_ sender: UIButton) {
+        
+let deadline = DispatchTime.now() + .seconds(3)
+            
+DispatchQueue.main.asyncAfter(deadline: deadline) {
+    print("Login button pressed")
+    
+    self.performSegue(withIdentifier: "segue.Main.loginToMainApp", sender: nil)
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+}
+    
 
 
 }
