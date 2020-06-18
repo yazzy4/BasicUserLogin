@@ -14,9 +14,15 @@ class ViewController: UIViewController {
 @IBOutlet weak var passwordTextField: UITextField!
 @IBOutlet weak var loginButton: UIButton!
     
-  
+    let correctUsername = "yb4"
+    let correctPassword = "123456"
     
 @IBAction func didTapLoginButton(_ sender: UIButton) {
+    
+    guard
+        usernameTextField.text == correctUsername,
+        passwordTextField.text == correctPassword
+        else { incorrectLoginAlert(); return }
         
 let deadline = DispatchTime.now() + .seconds(3)
             
@@ -26,6 +32,17 @@ DispatchQueue.main.asyncAfter(deadline: deadline) {
     self.performSegue(withIdentifier: "segue.Main.loginToMainApp", sender: self.usernameTextField.text)
 
         }
+    }
+    
+    func incorrectLoginAlert(){
+        
+        let message = "Incorrect username or password. Please try again"
+        let alert = UIAlertController(title: "Login Failed", message: message , preferredStyle: .alert)
+        
+        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel)
+        
+        alert.addAction(dismissAction)
+        present(alert, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
