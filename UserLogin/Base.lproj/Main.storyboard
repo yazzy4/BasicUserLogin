@@ -29,7 +29,7 @@
                                     <constraint firstAttribute="height" constant="40" id="yo2-U5-nTe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8d-6b-j8n">
                                 <rect key="frame" x="16" y="375" width="343" height="40"/>
@@ -88,17 +88,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fnX-FE-qbQ">
+                                <rect key="frame" x="112.5" y="150" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="Zkz-P5-7r0"/>
+                                    <constraint firstAttribute="height" constant="150" id="q8O-3r-8Ks"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="fnX-FE-qbQ" firstAttribute="centerX" secondItem="e2A-7C-lFG" secondAttribute="centerX" id="3SG-H1-By3"/>
                             <constraint firstItem="Cta-aG-dQX" firstAttribute="centerY" secondItem="e2A-7C-lFG" secondAttribute="centerY" id="HON-LB-fwW"/>
                             <constraint firstItem="Cta-aG-dQX" firstAttribute="leading" secondItem="7TT-BB-Mng" secondAttribute="leading" constant="75" id="RfF-6o-Np0"/>
+                            <constraint firstItem="fnX-FE-qbQ" firstAttribute="top" secondItem="7TT-BB-Mng" secondAttribute="top" constant="150" id="tN0-2S-oIO"/>
                             <constraint firstItem="7TT-BB-Mng" firstAttribute="trailing" secondItem="Cta-aG-dQX" secondAttribute="trailing" constant="75" id="u7N-aN-ZU1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7TT-BB-Mng"/>
                     </view>
                     <navigationItem key="navigationItem" id="YnO-S0-k2q"/>
                     <connections>
+                        <outlet property="avatarView" destination="fnX-FE-qbQ" id="OpH-vr-nRR"/>
                         <outlet property="greetingLabel" destination="Cta-aG-dQX" id="dh6-ny-8Js"/>
                     </connections>
                 </viewController>

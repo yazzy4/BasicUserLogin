@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91398250249BDEE500E7F4F0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9139824F249BDEE500E7F4F0 /* User.swift */; };
 		918C6867249AB330000F04B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C6866249AB330000F04B1 /* AppDelegate.swift */; };
 		918C6869249AB330000F04B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C6868249AB330000F04B1 /* SceneDelegate.swift */; };
 		918C686B249AB330000F04B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918C686A249AB330000F04B1 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9139824F249BDEE500E7F4F0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		918C6863249AB330000F04B1 /* UserLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UserLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		918C6866249AB330000F04B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		918C6868249AB330000F04B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				918C6865249AB330000F04B1 /* UserLogin */,
-				918C6864249AB330000F04B1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +54,7 @@
 				918C6863249AB330000F04B1 /* UserLogin.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		918C6865249AB330000F04B1 /* UserLogin */ = {
@@ -60,8 +62,10 @@
 			children = (
 				918C6866249AB330000F04B1 /* AppDelegate.swift */,
 				918C6868249AB330000F04B1 /* SceneDelegate.swift */,
+				9139824F249BDEE500E7F4F0 /* User.swift */,
 				918C686A249AB330000F04B1 /* ViewController.swift */,
 				918C687A249BC0D5000F04B1 /* DetailViewController.swift */,
+				918C6864249AB330000F04B1 /* Products */,
 				918C686C249AB330000F04B1 /* Main.storyboard */,
 				918C686F249AB335000F04B1 /* Assets.xcassets */,
 				918C6871249AB335000F04B1 /* LaunchScreen.storyboard */,
@@ -144,6 +148,7 @@
 				918C686B249AB330000F04B1 /* ViewController.swift in Sources */,
 				918C6867249AB330000F04B1 /* AppDelegate.swift in Sources */,
 				918C6869249AB330000F04B1 /* SceneDelegate.swift in Sources */,
+				91398250249BDEE500E7F4F0 /* User.swift in Sources */,
 				918C687B249BC0D5000F04B1 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

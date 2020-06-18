@@ -10,15 +10,18 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var avatarView: UIImageView!
     @IBOutlet weak var greetingLabel: UILabel!
     
-    var username: String?
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    guard let unwrappedUsername = self.username else { return }
-    greetingLabel.text = "Hello, \(unwrappedUsername)"
+        guard let unwrappedUser = self.user else { return }
+        
+        avatarView.image = unwrappedUser.avatar
+        greetingLabel.text = "Hello, \(unwrappedUser.name)! Your age is \(unwrappedUser.age)"
     }
     
 

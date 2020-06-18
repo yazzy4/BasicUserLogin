@@ -29,14 +29,16 @@ let deadline = DispatchTime.now() + .seconds(3)
 DispatchQueue.main.asyncAfter(deadline: deadline) {
     print("Login button pressed")
     
-    self.performSegue(withIdentifier: "segue.Main.loginToMainApp", sender: self.usernameTextField.text)
+    let user = User.init(name: "Yaz", age: 30,  avatar: UIImage(named: "pursuitProfilePic") ?? UIImage())
+    
+    self.performSegue(withIdentifier: "segue.Main.loginToMainApp", sender: user)
 
         }
     }
     
     func incorrectLoginAlert(){
         
-        let message = "Incorrect username or password. Please try again"
+        let message = "Incorrect username or password. Please try again."
         let alert = UIAlertController(title: "Login Failed", message: message , preferredStyle: .alert)
         
         let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel)
@@ -48,9 +50,9 @@ DispatchQueue.main.asyncAfter(deadline: deadline) {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        if let mainAppVC = segue.destination as? DetailViewController, let username = sender as? String {
+        if let mainAppVC = segue.destination as? DetailViewController, let user = sender as? User {
            
-            mainAppVC.username = username
+            mainAppVC.user = user
             
         
         }
