@@ -12,10 +12,13 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var greetingLabel: UILabel!
     
-
+    var username: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+    guard let unwrappedUsername = self.username else { return }
+    greetingLabel.text = "Hello, \(unwrappedUsername)"
     }
     
 

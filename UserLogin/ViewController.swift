@@ -23,12 +23,21 @@ let deadline = DispatchTime.now() + .seconds(3)
 DispatchQueue.main.asyncAfter(deadline: deadline) {
     print("Login button pressed")
     
-    self.performSegue(withIdentifier: "segue.Main.loginToMainApp", sender: nil)
+    self.performSegue(withIdentifier: "segue.Main.loginToMainApp", sender: self.usernameTextField.text)
 
+        }
     }
-}
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let mainAppVC = segue.destination as? DetailViewController, let username = sender as? String {
+           
+            mainAppVC.username = username
+            
+        
+        }
+    }
 
 }
 
